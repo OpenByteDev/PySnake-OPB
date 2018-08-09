@@ -69,7 +69,7 @@ class Snake:
 
     def check_pos(self, part: Point) -> bool:
         ft = self.get_ft(part)
-        return ft and self.check_ft(ft)
+        return ft is not None and Snake.check_ft(ft)
 
     @staticmethod
     def check_ft(ft: FieldType) -> bool:
